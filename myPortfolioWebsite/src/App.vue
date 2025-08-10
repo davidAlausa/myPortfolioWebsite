@@ -1,11 +1,12 @@
-<script>
+<script setup>
+import Navbar from '@/components/Navbar.vue';
 
-    import HomeView from '@/views/HomeView.vue'
-
+import { RouterView } from 'vue-router';
 </script>
 
 <template>
-
-    hello
-
+    <div class="bg-primaryDARK min-h-screen text-secondaryDARK">
+        <Navbar />
+        <RouterView />
+    </div>
 </template>
