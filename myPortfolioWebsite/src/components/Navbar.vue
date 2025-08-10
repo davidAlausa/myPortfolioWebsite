@@ -1,5 +1,16 @@
 <script setup>
-import { RouterLink } from 'vue-router';
+import { RouterLink, useRoute } from 'vue-router';
+
+const baseClasses = 'hover:text-accentDARK';
+const activeClasses = 'text-accentDARK underline decoration-2 underline-offset-4';
+const inactiveClasses = 'text-secondaryDARK';
+
+const isActiveLink = (routePath) => {
+  const route = useRoute();
+  return route.path === routePath;
+};
+
+
 
 </script>
 <template>
@@ -12,11 +23,11 @@ import { RouterLink } from 'vue-router';
 
     <nav class="rounded-full shadow-xl px-10 py-4">
         <div class="flex gap-x-10">
-            <RouterLink to="/*" class="text-secondaryDARK hover:text-accentDARK">About</RouterLink>
-            <RouterLink to="/*" class="text-secondaryDARK hover:text-accentDARK">Skills</RouterLink>
-            <RouterLink to="/*" class="text-secondaryDARK hover:text-accentDARK">Timeline</RouterLink>
-            <RouterLink to="/*" class="text-secondaryDARK hover:text-accentDARK">Projects</RouterLink>
-            <RouterLink to="/*" class="text-secondaryDARK hover:text-accentDARK">Contact</RouterLink>
+            <RouterLink to="/about" :class="[isActiveLink('/about') ? activeClasses : inactiveClasses, baseClasses]">About</RouterLink>
+            <RouterLink to="/skills"    :class="[isActiveLink('/skills') ? activeClasses : inactiveClasses, baseClasses]">Skills</RouterLink>
+            <RouterLink to="/timeline"  :class="[isActiveLink('/timeline') ? activeClasses : inactiveClasses, baseClasses]">Timeline</RouterLink>
+            <RouterLink to="/projects"  :class="[isActiveLink('/projects') ? activeClasses : inactiveClasses, baseClasses]">Projects</RouterLink>
+            <RouterLink to="/contact"   :class="[isActiveLink('/contact') ? activeClasses : inactiveClasses, baseClasses]">Contact</RouterLink>
         </div>
     </nav>
 </div>
