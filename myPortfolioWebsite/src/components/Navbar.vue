@@ -12,11 +12,11 @@ import { RouterLink } from 'vue-router';
 
     <nav class="rounded-full shadow-xl px-10 py-4">
         <div class="flex gap-x-10">
-            <RouterLink to="/" class="text-secondaryDARK hover:text-accentDARK">About</RouterLink>
-            <RouterLink to="/" class="text-secondaryDARK hover:text-accentDARK">Skills</RouterLink>
-            <RouterLink to="/" class="text-secondaryDARK hover:text-accentDARK">Timeline</RouterLink>
-            <RouterLink to="/" class="text-secondaryDARK hover:text-accentDARK">Projects</RouterLink>
-            <RouterLink to="/" class="text-secondaryDARK hover:text-accentDARK">Contact</RouterLink>
+            <RouterLink to="/*" class="text-secondaryDARK hover:text-accentDARK">About</RouterLink>
+            <RouterLink to="/*" class="text-secondaryDARK hover:text-accentDARK">Skills</RouterLink>
+            <RouterLink to="/*" class="text-secondaryDARK hover:text-accentDARK">Timeline</RouterLink>
+            <RouterLink to="/*" class="text-secondaryDARK hover:text-accentDARK">Projects</RouterLink>
+            <RouterLink to="/*" class="text-secondaryDARK hover:text-accentDARK">Contact</RouterLink>
         </div>
     </nav>
 </div>
