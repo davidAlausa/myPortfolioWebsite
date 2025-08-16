@@ -5,7 +5,7 @@ import { onMounted, ref} from 'vue'
 const container = ref(null)
 
 const drawChart = () => {
-const data = [10, 20, 30, 40, 50], width = 300, height=300;
+    const data = [10, 20, 30, 40, 50], width = 300, height=300;
     const radius = Math.min(width, height) / 2;
 
     const svg = d3.select(container.value)

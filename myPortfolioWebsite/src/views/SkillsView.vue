@@ -2,6 +2,7 @@
 
     import Visualisations from '@/components/Visualisations.vue';
     import VisualisationsText from '@/components/VisualisationsText.vue';
+    import Certifications from '@/components/Certifications.vue';
 
 </script>
 <template>
@@ -23,19 +24,29 @@
                     visualisations I have made below using D3.js. Enjoy!
             </p>
         </section>
-        <div class="flex justify-between items-center px-56 py-10">    
+        <div class="flex justify-between items-center px-96 py-20">    
             <Visualisations />
             <VisualisationsText
             title="Coding Languages used in my projects."
             description="Favourites: JavaScript, Java, Python"
             />
         </div>
-        <div class="flex justify-between items-center  px-56 py-10">
+        <div class="flex justify-between items-center  px-96 py-10">
             <VisualisationsText 
                 title="Frameworks & Tools used in my projects."
                 description="Favourites: Vue, Spring"
             />
             <Visualisations />
         </div>
+        <section class="flex flex-col mt-20 p-10 items-center justify-center">
+            <h1 class="text-3xl font-bold text-accentDARK">Certifications</h1>
+            <Certifications class="mt-10"/>
+        </section>
+        <section class="flex flex-col mt-20 p-10 items-center justify-center">
+            <h1 class="text-3xl font-bold text-accentDARK">Don't see a particular tool, language or technology here?</h1>
+            <p class="justify-between text-xl">
+                Chances are I've explored it, haven't showcased it yet. Drop me a message if you're curious about anything specific - I'm always learning and expanding my toolkit.
+            </p>
+        </section>  
     </div>
 </template>  

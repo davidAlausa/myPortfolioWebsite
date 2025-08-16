@@ -15,7 +15,7 @@ const isActiveLink = (routePath) => {
 </script>
 <template>
 
-<div class="flex justify-between items-center p-10 w-full">
+<div class="flex justify-between items-center p-16 w-full">
 
     <RouterLink to="/" class="text-accentDARK hover:text-secondaryDARK">
         <h1 class=" text-2xl font-bold">DAVID ALAUSA</h1>
