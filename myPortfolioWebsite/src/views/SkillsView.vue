@@ -8,7 +8,7 @@
 <template>
     <div class="skills-view">   
         <section class="mt-10 p-10">
-            <h1 class="text-7xl font-bold mt-20 text-accentDARK">Skills</h1>
+            <h1 class="text-7xl font-bold mt-5 md:mt-20 text-accentDARK">Skills</h1>
             <p class="max-w-[100ch] justify-between">
                     As a software developer, I have honed a diverse set of skills that span across various domains of technology. 
                     My expertise includes backend development with Spring and  frontend development using Vue.js 
@@ -24,27 +24,35 @@
                     visualisations I have made below using D3.js. Enjoy!
             </p>
         </section>
-        <div class="flex justify-between items-center px-96 py-20">    
+        <div class="flex flex-col md:flex-row justify-between items-center px-10 md:px-96 py-2 md:py-20 mt-2 md:mt-20 ">    
             <Visualisations />
             <VisualisationsText
             title="Coding Languages used in my projects."
             description="Favourites: JavaScript, Java, Python"
+            class="mt-10 md:mt-0"
             />
         </div>
-        <div class="flex justify-between items-center  px-96 py-10">
+
+        <div class="md:hidden px-20">
+            <hr class="my-6 border-t-2 border-accentDARK" />
+        </div>
+
+
+        <div class="flex flex-col md:flex-row justify-between items-center  px-10 md:px-96 py-2 md:py-20">
             <VisualisationsText 
                 title="Frameworks & Tools used in my projects."
                 description="Favourites: Vue, Spring"
+                class="mb-10 md:mb-0"
             />
             <Visualisations />
         </div>
-        <section class="flex flex-col mt-20 p-10 items-center justify-center">
+        <section class="flex flex-col mt-20 md:mt-56 p-10 items-center justify-center">
             <h1 class="text-3xl font-bold text-accentDARK">Certifications</h1>
             <Certifications class="mt-10"/>
         </section>
         <section class="flex flex-col mt-20 p-10 items-center justify-center">
-            <h1 class="text-3xl font-bold text-accentDARK">Don't see a particular tool, language or technology here?</h1>
-            <p class="justify-between text-xl">
+            <h1 class="text-xl md:text-3xl font-bold text-accentDARK">Don't see a particular tool, language or technology here?</h1>
+            <p class="justify-between text-sm md:text-xl">
                 Chances are I've explored it, haven't showcased it yet. Drop me a message if you're curious about anything specific - I'm always learning and expanding my toolkit.
             </p>
         </section>  

@@ -5,15 +5,16 @@ import { onMounted, ref} from 'vue'
 const container = ref(null)
 
 const drawChart = () => {
-    const data = [10, 20, 30, 40, 50], width = 300, height=300;
-    const radius = Math.min(width, height) / 2;
+    const data = [10, 20, 30, 40, 50], size = 300;
+    const radius = size / 2;
 
     const svg = d3.select(container.value)
         .append('svg')
-        .attr('width', width)
-        .attr('height', height)
+        .attr('viewBox', `0 0 ${size} ${size}`)
+        .attr('preserveAspectRatio', 'xMidYMid meet')
+        .classed('w-full h-auto', true)
         .append('g')
-        .attr('transform', `translate(${width / 2}, ${height / 2})`);
+        .attr('transform', `translate(${size / 2}, ${size / 2})`);
 
     const pie = d3.pie();
     const arc = d3.arc()

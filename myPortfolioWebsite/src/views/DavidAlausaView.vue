@@ -48,7 +48,7 @@ onMounted(() => {
 </script>
 <template>
     <section class="mt-20 flex flex-col">
-        <h1 class="text-center text-9xl font-bold mt-20 text-accentDARK">David Alausa</h1>
-        <p class="text-center mt-4 py-10">{{ description }}</p>
+        <h1 class="text-center text-5xl md:text-9xl font-bold mt-20 text-accentDARK">David Alausa</h1>
+        <p class="text-center mt-1 md:mt-4 py-5 md:py-10">{{ description }}</p>
     </section>
 </template>
