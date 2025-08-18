@@ -22,7 +22,6 @@ const sidenavOpen = ref(false)
         <h1 class=" text-2xl font-bold">DAVID ALAUSA</h1>
     </RouterLink>
 
-    <!-- Desktop Nav -->
     <nav class="hidden md:block rounded-full shadow-xl px-10 py-4">
       <div class="flex gap-x-10">
         <RouterLink to="/about"    :class="[isActiveLink('/about')    ? activeClasses : inactiveClasses, baseClasses]">About</RouterLink>
@@ -33,7 +32,6 @@ const sidenavOpen = ref(false)
       </div>
     </nav>
 
-    <!-- Mobile Hamburger -->
     <button 
       @click="sidenavOpen = true" 
       class="md:hidden text-accentDARK text-3xl focus:outline-none"
@@ -42,7 +40,6 @@ const sidenavOpen = ref(false)
     </button>
 </div>
 
-<!-- BACKDROP (dims background) -->
   <transition name="fade">
     <div 
       v-if="sidenavOpen"
@@ -51,15 +48,12 @@ const sidenavOpen = ref(false)
     ></div>
   </transition>
 
-<!-- Side Navigation -->
   <div 
     class="fixed top-0 left-0 h-full bg-primaryDARK overflow-x-hidden transition-all duration-500 z-50"
     :class="sidenavOpen ? 'w-64' : 'w-0'"
   >
-    <!-- Close button -->
     <a @click="sidenavOpen = false" class="absolute top-0 right-5 text-4xl text-secondaryDARK cursor-pointer">&times;</a>
 
-    <!-- Links -->
     <div class="flex flex-col mt-20 space-y-6 pl-8">
       <RouterLink to="/about"    @click="sidenavOpen=false" :class="[isActiveLink('/about')    ? activeClasses : inactiveClasses, baseClasses]">About</RouterLink>
       <RouterLink to="/skills"   @click="sidenavOpen=false" :class="[isActiveLink('/skills')   ? activeClasses : inactiveClasses, baseClasses]">Skills</RouterLink>
