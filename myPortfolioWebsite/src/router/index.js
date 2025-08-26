@@ -7,6 +7,7 @@ import NotFoundView from '@/views/NotFoundView.vue'
 import DavidAlausaView from '@/views/DavidAlausaView.vue';
 import AboutView from '@/views/AboutView.vue';
 import SkillsView from '@/views/SkillsView.vue';
+import ProjectsView from '@/views/ProjectsView.vue';
 import ContactView from '@/views/ContactView.vue';
 
 const router = createRouter({
@@ -31,6 +32,11 @@ const router = createRouter({
       path: '/skills',
       name: 'skills',
       component: SkillsView,
+    },
+    {
+      path: '/projects',
+      name: 'projects',
+      component: ProjectsView,
     },
     {
       path: '/contact',

@@ -9,6 +9,7 @@
     <div class="skills-view">   
         <section class="mt-10 p-10">
             <h1 class="text-7xl font-bold mt-5 md:mt-20 text-accentDARK">Skills</h1>
+            <br>
             <p class="max-w-[100ch] justify-between">
                     As a software developer, I have honed a diverse set of skills that span across various domains of technology. 
                     My expertise includes backend development with Spring and  frontend development using Vue.js 
