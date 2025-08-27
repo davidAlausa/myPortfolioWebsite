@@ -7,8 +7,8 @@
 </script>
 <template>
     <div class="skills-view">   
-        <section class="mt-10 p-10">
-            <h1 class="text-7xl font-bold mt-5 md:mt-20 text-accentDARK">Skills</h1>
+        <section class="p-10">
+            <h1 class="text-7xl font-bold text-accentDARK">Skills</h1>
             <br>
             <p class="max-w-[100ch] justify-between">
                     As a software developer, I have honed a diverse set of skills that span across various domains of technology. 
@@ -26,7 +26,7 @@
             </p>
         </section>
         <div class="flex flex-col md:flex-row justify-between items-center px-10 md:px-96 py-2 md:py-20 mt-2 md:mt-20 ">    
-            <Visualisations />
+            <Visualisations type="languages"/>
             <VisualisationsText
             title="Coding Languages used in my projects."
             description="Favourites: JavaScript, Java, Python"
@@ -45,8 +45,9 @@
                 description="Favourites: Vue, Spring"
                 class="mb-10 md:mb-0"
             />
-            <Visualisations />
+            <Visualisations type="frameworks"/>
         </div>
+        <small class="flex flex-row text-center justify-center text-primaryDARK">***Data visualised inlclude academic projects and coursework as well as personal projects.***</small>
         <section class="flex flex-col mt-20 md:mt-56 p-10 items-center justify-center">
             <h1 class="text-3xl font-bold text-accentDARK">Certifications</h1>
             <Certifications class="mt-10"/>

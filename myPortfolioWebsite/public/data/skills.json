@@ -1,0 +1,24 @@
+{
+  "skills": {
+    "languages": [
+      { "name": "JavaScript",   "projects": 3,  "favourite": true,  "lastUsed": "Current",  "notes": "Currently using, very comfortable"},
+      { "name": "Java",         "projects": 30, "favourite": true,  "lastUsed": "Current",  "notes": "Extensive use in FYP backend"},
+      { "name": "C++",          "projects": 45, "favourite": false, "lastUsed": "Past",     "notes": "Introductory language, minimal current use"},
+      { "name": "C#",           "projects": 21, "favourite": false, "lastUsed": "Past",     "notes": "Used in 3-year group project" },
+      { "name": "Python",       "projects": 10, "favourite": true,  "lastUsed": "Recently", "notes": "Simple projects, some ML experience" },
+      { "name": "PHP",          "projects": 11, "favourite": false, "lastUsed": "Past",     "notes": "Minimal use, not preferred" }
+    ],
+    "databases": [
+      { "name": "MySQL",        "projects": 15, "favourite": false,  "lastUsed": "Current",  "notes": "Predominantly used in SQL databases" },
+      { "name": "MongoDB",      "projects": 2,  "favourite": true,   "lastUsed": "Current",  "notes": "First introduction to NoSQL, very fresh." }
+    ],
+    "frameworks": [
+      { "name": "Vue",          "projects": 2,  "favourite": true,  "lastUsed": "Current",  "notes": "Favourite frontend framework"},
+      { "name": "Spring",       "projects": 5,  "favourite": false, "lastUsed": "Recently", "notes": "Used in FYP backend, comfortable but bloated"},
+      { "name": "D3.js",        "projects": 2,  "favourite": true,  "lastUsed": "Recently", "notes": "Learning stage, applied in projects"},
+      { "name": "Thymeleaf",    "projects": 5,  "favourite": false, "lastUsed": "Recently", "notes": "Used with Spring, but prefer Tailwind/Bootstrap"},
+      { "name": "Bootstrap",    "projects": 8,  "favourite": true,  "lastUsed": "Past",    "notes": "Comfortable, but prefer Tailwind"},
+      { "name": "Tailwind.css", "projects": 1,  "favourite": true,  "lastUsed": "Current",  "notes": "Currently using, highly preferred"}
+    ]
+  }
+}

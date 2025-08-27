@@ -1,19 +1,25 @@
 <script setup>
 
     const certifications = [
-        { name: 'Certified Kubernetes Administrator'},
-        { name: 'AWS Certified Solutions Architect' },
-        { name: 'Google Cloud Professional Data Engineer'},
+        { name: 'Bsc Software Developer', link: '#' },
+
     ];
 
 </script>
 <template>
-    <Card class="rounded-full shadow-xl px-10 py-4 w-full">
-        <div class="flex flex-row gap-x-10 justify-around w-full overflow-x-auto">
-            <div class="flex flex-col items-center justify-center" v-for="certification in certifications" :key="certification.name">
-                <span class="pi pi-file text-xl md:text-5xl"></span>
-                <p class="text-secondaryDARK font-bold mt-5 truncate w-[20ch]">{{ certification.name }}</p>
+    <Card class="rounded-full shadow-xl px-6 py-6 w-full">
+        <div class="flex flex-row gap-10 overflow-x-auto w-full py-4">
+            <div 
+            v-for="certification in certifications" 
+            :key="certification.name" 
+            class="flex-shrink-0 flex flex-col items-center justify-center w-40"
+            >
+            <a :href="certification.link" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center">
+                <span class="pi pi-file text-3xl md:text-5xl text-accentDARK"></span>
+                <p class="text-secondaryDARK font-bold mt-4 text-center">{{ certification.name }}</p>
+            </a>
             </div>
         </div>
     </Card>
+
 </template>

@@ -3,8 +3,8 @@
 </script>
 <template>
 
-<div class="flex flex-col p-10 mt-10 md:mt-20">
-    <h1 class="text-7xl font-bold mt-5 md:mt-10 mb-10 text-accentDARK">Contact</h1>
+<div class="flex flex-col p-10">
+    <h1 class="text-7xl font-bold  mb-10 text-accentDARK">Contact</h1>
     <ContactUsCards LOGO="pi-github flex gap-x-20">
         <a href="https://www.github.com/davidAlausa">   
         <h1 class="text-3xl font-bold text-secondaryDARK md:text-primaryDARK">GitHub</h1>
