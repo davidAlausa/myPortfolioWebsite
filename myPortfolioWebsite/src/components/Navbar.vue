@@ -34,7 +34,7 @@ const toggleDark = useToggle(isDark)
         </div>
       </nav>
 
-      <button @click="toggleDark()" class="relative w-14 h-8 bg-accentLIGHT dark:bg-accentDARK dark:bg-accentLIGHT dark:bg-accentDARK rounded-full flex items-center px-1 transition-colors duration-300 focus:outline-none">
+      <button @click="toggleDark()" :class="['relative w-14 h-8 rounded-full flex items-center px-1 transition-colors duration-300 focus:outline-none', isDark ? 'bg-accentDARK' : 'bg-accentLIGHT']">
         <span class="absolute left-2 text-xs text-gray-700 text-primaryLIGHT dark:text-primaryDARK pi pi-sun"></span>
         <span class="absolute right-2 text-xs text-gray-700 text-primaryLIGHT dark:text-primaryDARK pi pi-moon"></span>
         <span :class="['absolute top-1 left-1 w-6 h-6 rounded-full bg-white dark:bg-primaryLIGHT dark:bg-primaryDARK shadow transform transition-all duration-300', isDark ? 'translate-x-6' : 'translate-x-0']"></span>
