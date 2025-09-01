@@ -35,7 +35,7 @@
         </div>
 
         <div class="md:hidden px-20">
-            <hr class="my-6 border-t-2 border-accentDARK" />
+            <hr class="my-6 border-t-2 border-accentLIGHT dark:border-accentDARK" />
         </div>
 
 

@@ -53,8 +53,8 @@ import PageTitles from '@/components/PageTitles.vue';
                     </div>
                 </div>
             </div>
-            <div class="relative w-full h-32 overflow-x-auto scrollbar scrollbar-thumb-accentDARK scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-track-primaryDARK flex md:hidden">
-                <div class="absolute top-10 left-0 right-0 border-t-4 border-accentDARK rounded-full w-[920px]"></div>
+            <div class="relative w-full h-32 overflow-x-auto scrollbar scrollbar-thumb-accentLIGHT dark:scrollbar-thumb-accentDARK scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-track-primaryLIGHT dark:scrollbar-track-primaryDARK flex md:hidden">
+                <div class="absolute top-10 left-0 right-0 border-t-4 border-accentLIGHT dark:border-accentDARK rounded-full w-[920px]"></div>
                 <ul class="flex flex-row gap-10 w-full py-8">
                     <li
                         v-for="(event, idx) in timeline"
@@ -65,7 +65,7 @@ import PageTitles from '@/components/PageTitles.vue';
                         <div class="z-10">
                             <div
                                 class="w-5 h-5 rounded-full border-4"
-                                :class="active === idx ? 'bg-accentLIGHT dark:bg-accentDARK border-primaryDARK' : 'bg-primaryLIGHT dark:bg-primaryDARK border-accentDARK'"
+                                :class="active === idx ? 'bg-accentLIGHT dark:bg-accentDARK border-primaryLIGHT dark:border-primaryDARK' : 'bg-primaryLIGHT dark:bg-primaryDARK border-accentLIGHT dark:border-accentDARK'"
                             ></div>
                         </div>
                         <div class="mt-4 text-center"
