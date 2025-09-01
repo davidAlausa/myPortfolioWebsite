@@ -15,8 +15,8 @@
             class="flex-shrink-0 flex flex-col items-center justify-center w-40"
             >
             <a :href="certification.link" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center">
-                <span class="pi pi-file text-3xl md:text-5xl text-accentDARK"></span>
-                <p class="text-secondaryDARK font-bold mt-4 text-center">{{ certification.name }}</p>
+                <span class="pi pi-file text-3xl md:text-5xl text-accentLIGHT dark:text-accentDARK"></span>
+                <p class="text-secondaryLIGHT dark:text-secondaryDARK font-bold mt-4 text-center">{{ certification.name }}</p>
             </a>
             </div>
         </div>

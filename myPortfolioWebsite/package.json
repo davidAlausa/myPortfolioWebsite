@@ -12,6 +12,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vueuse/core": "^13.9.0",
     "axios": "^1.11.0",
     "d3": "^7.9.0",
     "primeicons": "^7.0.0",

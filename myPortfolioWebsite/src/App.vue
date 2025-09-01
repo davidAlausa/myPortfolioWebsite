@@ -6,7 +6,7 @@ import { RouterView } from 'vue-router';
 </script>
 
 <template>
-    <div class="bg-primaryDARK min-h-screen text-secondaryDARK flex flex-col">
+    <div class="bg-primaryLIGHT dark:bg-primaryDARK min-h-screen text-secondaryLIGHT dark:text-secondaryDARK flex flex-col transition-all duration-500 ease-in-out">
         <Navbar />
         <main class="flex-grow">
             <Transition name="fade" mode="out-in">

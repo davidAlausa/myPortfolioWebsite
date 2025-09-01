@@ -1,7 +1,8 @@
 <script setup>
 
-import { transition } from 'd3';
 import { ref } from 'vue'
+
+import PageTitles from '@/components/PageTitles.vue';
 
     const timeline = [
     { date: "2025", month: "August",  title: "Created This Website", description: "With the freedom to work on personal projects, I decided to build my own website from scratch using Vue.js. \n\n It serves as a platform to showcase the skills I’ve developed throughout my software development journey and to present future projects. \n\n And yes, you are looking at it!" },
@@ -18,19 +19,18 @@ import { ref } from 'vue'
 </script>
 <template>
     <div class="timeline-view">
-        <section class="p-10">
-            <h1 class="text-7xl font-bold text-accentDARK">Timeline</h1>
-            <br>
+
+        <PageTitles title="Timeline">
             <p class="max-w-[100ch] justify-between">
                 Scroll to go on a journey through my projects, milestones, and growth as a developer.
-            </p>
-        </section>
+            </p>            
+        </PageTitles>
 
         <section class="flex flex-col md:flex-row items-start md:items-start p-4 md:p-10">
-            <div class="relative md:w-1/4 w-full h-56 overflow-y-scroll scrollbar scrollbar-thumb-accentDARK scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-track-primaryDARK hidden md:block">
+            <div class="relative md:w-1/4 w-full h-56 overflow-y-scroll scrollbar scrollbar-thumb-accentLIGHT dark:scrollbar-thumb-accentDARK scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-track-primaryLIGHT dark:scrollbar-track-primaryDARK hidden md:block">
                 <div class="sticky top-0 h-auto"> 
                     <div class="relative h-fit overflow-y-auto">
-                        <div class="absolute left-6 top-0 bottom-0 border-l-4 border-accentDARK rounded-full"></div>
+                        <div class="absolute left-6 top-0 bottom-0 border-l-4 border-accentLIGHT dark:border-accentDARK rounded-full"></div>
                         <ul class="flex flex-col gap-10 w-full py-8">
                             <li
                                 v-for="(event, idx) in timeline"
@@ -41,11 +41,11 @@ import { ref } from 'vue'
                                 <div class="z-10 ml-4">
                                     <div
                                         class="w-5 h-5 rounded-full border-4"
-                                        :class="active === idx ? 'bg-accentDARK border-primaryDARK' : 'bg-primaryDARK border-accentDARK'"
+                                        :class="active === idx ? 'bg-accentLIGHT dark:bg-accentDARK border-accentLIGHT dark:border-accentDARK' : 'bg-primaryLIGHT dark:bg-primaryDARK border-accentLIGHT dark:border-accentDARK'"
                                     ></div>
                                 </div>
                                 <div class="ml-8 min-w-[80px]"
-                                    :class="active === idx ? 'text-accentDARK font-bold' : 'text-secondaryDARK font-semibold'">
+                                    :class="active === idx ? 'text-accentLIGHT dark:text-accentDARK font-bold' : 'text-secondaryLIGHT dark:text-secondaryDARK font-semibold'">
                                     {{ event.month}} {{ event.date }}
                                 </div>
                             </li>
@@ -65,11 +65,11 @@ import { ref } from 'vue'
                         <div class="z-10">
                             <div
                                 class="w-5 h-5 rounded-full border-4"
-                                :class="active === idx ? 'bg-accentDARK border-primaryDARK' : 'bg-primaryDARK border-accentDARK'"
+                                :class="active === idx ? 'bg-accentLIGHT dark:bg-accentDARK border-primaryDARK' : 'bg-primaryLIGHT dark:bg-primaryDARK border-accentDARK'"
                             ></div>
                         </div>
                         <div class="mt-4 text-center"
-                            :class="active === idx ? 'text-accentDARK font-bold' : 'text-secondaryDARK font-semibold'">
+                            :class="active === idx ? 'text-accentLIGHT dark:text-accentDARK font-bold' : 'text-secondaryLIGHT dark:text-secondaryDARK font-semibold'">
                             {{ event.month}}<br>{{ event.date }}
                         </div>
                     </li>
@@ -79,8 +79,8 @@ import { ref } from 'vue'
             <div class="md:w-3/4 w-full md:pl-10 mt-10 md:mt-0">
                 <Transition name="fade" mode="out-in">
                     <div :key="active">
-                        <h2 class="text-2xl md:text-3xl font-bold text-accentDARK">{{ timeline[active]?.title }}</h2>
-                        <p class="text-secondaryDARK mt-2 text-base md:text-lg whitespace-pre-line">{{ timeline[active]?.description }}</p>
+                        <h2 class="text-2xl md:text-3xl font-bold text-accentLIGHT dark:text-accentDARK">{{ timeline[active]?.title }}</h2>
+                        <p class="text-secondaryLIGHT dark:text-secondaryDARK mt-2 text-base md:text-lg whitespace-pre-line">{{ timeline[active]?.description }}</p>
                     </div>
                 </Transition>
             </div>
