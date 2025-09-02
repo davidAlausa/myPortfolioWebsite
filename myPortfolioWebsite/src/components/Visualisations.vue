@@ -24,8 +24,8 @@ const drawChart = async () => {
     const pie = d3.pie().value(d => d.projects)
     const arc = d3.arc().innerRadius(50).outerRadius(radius)
 
-    // const color = d3.scaleOrdinal(["#2E005E","#00A676","#D97706","#2563EB","#DC2626","#9333EA","#F59E0B","#10B981","#3B82F6","#F43F5E"])
-const color = d3.scaleOrdinal(d3.schemeDark2);    
+    //const color = d3.scaleOrdinal(["#2E005E","#00A676","#D97706","#2563EB","#DC2626","#9333EA","#F59E0B","#10B981","#3B82F6","#F43F5E"])
+    const color = d3.scaleOrdinal(d3.schemeBuPu[9]);    
     const tooltip = d3.select('#tooltip')
 
     pathData = svg.selectAll('path')
@@ -33,6 +33,8 @@ const color = d3.scaleOrdinal(d3.schemeDark2);
         .enter()
         .append('path')
         .attr('fill', (d,i) => color(i))
+        .attr('stroke', '#000000ff')
+        .attr('stroke-width', 2)
         .on('mouseover', (event,d) => {
             const datum = d.data
             tooltip.style('display','block')
