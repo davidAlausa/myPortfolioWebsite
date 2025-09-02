@@ -1,9 +1,7 @@
 <script setup>
 import * as d3 from 'd3'
-import { onMounted, ref, defineProps, watchEffect } from 'vue'
-import { useDark } from '@vueuse/core'
+import { onMounted, ref, defineProps } from 'vue'
 
-const isDark = useDark()
 const { type } = defineProps({ type: String })
 const container = ref(null)
 
@@ -24,13 +22,10 @@ const drawChart = async () => {
         .attr('transform', `translate(${size/2}, ${size/2})`)
 
     const pie = d3.pie().value(d => d.projects)
-    const arc = d3.arc().innerRadius(100).outerRadius(radius)
+    const arc = d3.arc().innerRadius(50).outerRadius(radius)
 
-    const lightPalette = ["#10061f","#bc82c4","#70437f","#96529b","#3c274e","#cda7d2","#341054","#462167","#1e0b37","#2e0f48"]
-    const darkPalette  = ["#00441B","#006D2C","#238845","#41AB6D","#74C476","#A1D99B","#C7E9C0","#E5F5E0","#F7FCF5","#d9f99d"]
-
-    const color = d3.scaleOrdinal(isDark.value ? darkPalette : lightPalette)
-
+    // const color = d3.scaleOrdinal(["#2E005E","#00A676","#D97706","#2563EB","#DC2626","#9333EA","#F59E0B","#10B981","#3B82F6","#F43F5E"])
+const color = d3.scaleOrdinal(d3.schemeDark2);    
     const tooltip = d3.select('#tooltip')
 
     pathData = svg.selectAll('path')
@@ -56,16 +51,6 @@ const drawChart = async () => {
             return t => arc(i(t))
         })
 }
-
-watchEffect(() => {
-    if (!pathData) return
-    const palette = isDark.value 
-        ? ["#00441B","#006D2C","#238845","#41AB6D","#74C476","#A1D99B","#C7E9C0","#E5F5E0","#F7FCF5","#d9f99d"]
-        : ["#0f172a","#1e293b","#334155","#475569","#64748b","#94a3b8","#cbd5e1","#e2e8f0","#f1f5f9","#f8fafc"]
-    const color = d3.scaleOrdinal(palette)
-    pathData.transition().duration(500).attr('fill', (d,i) => color(i))
-})
-
 onMounted(() => drawChart())
 </script>
 

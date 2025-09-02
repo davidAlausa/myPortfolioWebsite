@@ -19,7 +19,7 @@ export default{
         'accentDARK': '#00DA7C',
         'primaryLIGHT': '#EBEBEB',
         'secondaryLIGHT': '#272727',
-        'accentLIGHT': '#2E005E',
+        'accentLIGHT': '#7b00ffff',
       }
     },
   },

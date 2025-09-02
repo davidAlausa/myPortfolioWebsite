@@ -1,13 +1,18 @@
 <script setup>
     import PageTitles from '@/components/PageTitles.vue';
     import ProjectCards from '@/components/ProjectCards.vue';
-    import { ref, onMounted } from 'vue';
+    import { ref, onMounted, computed } from 'vue';
     import PulseLoader from 'vue-spinner/src/PulseLoader.vue';
+    import { useDark } from '@vueuse/core';
 
     const projects = ref([]);
     const CACHE_KEY = 'github_projects';
     const CACHE_DURATION = 60 * 60 * 1000; // 1 hour
     const isLoading = ref(false);
+
+    const isDark = useDark();
+
+    const color = computed(() => isDark.value ? '#00DA7C' : '#2E005E');
 
     onMounted(async () => {
     const cached = localStorage.getItem(CACHE_KEY);
@@ -63,8 +68,8 @@
                 class="hover:scale-105 transition-transform duration-300"
             />
         </div>
-        <div v-if="isLoading" class="text-center text-secondaryLIGHT dark:text-secondaryDARK">
-            <PulseLoader />
+        <div v-if="isLoading" class="text-center">
+            <PulseLoader :color="color"/>
         </div>
     </div>
 </template>

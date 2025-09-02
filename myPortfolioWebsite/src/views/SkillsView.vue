@@ -25,7 +25,7 @@
                     visualisations I have made below using D3.js. Enjoy!
             </p>
         </PageTitles>   
-        <div class="flex flex-col md:flex-row justify-between items-center px-10 md:px-96 py-2 md:py-20 mt-2 md:mt-20 ">    
+        <div class="flex flex-col md:flex-row justify-center gap-10 items-center px-10 md:px-5 lg:px-28 py-2 md:py-10 lg:py-20 mt-2 md:mt-20 max-w-[1050px] mx-auto">    
             <Visualisations type="languages"/>
             <VisualisationsText
             title="Coding Languages used in my projects."
@@ -39,7 +39,7 @@
         </div>
 
 
-        <div class="flex flex-col md:flex-row justify-between items-center  px-10 md:px-96 py-2 md:py-20">
+        <div class="flex flex-col md:flex-row justify-center gap-10 items-center  px-10 md:px-5 lg:px-28 py-2 md:py-20 max-w-[1050px] mx-auto">
             <VisualisationsText 
                 title="Frameworks & Tools used in my projects."
                 description="Favourites: Vue, Spring"
@@ -48,7 +48,7 @@
             <Visualisations type="frameworks"/>
         </div>
         <small class="flex flex-row text-center justify-center text-primaryLIGHT dark:text-primaryDARK">***Data visualised inlclude academic projects and coursework as well as personal projects.***</small>
-        <section class="flex flex-col mt-20 md:mt-56 p-10 items-center justify-center">
+        <section class="flex flex-col mt-20 md:mt-10 p-10 items-center justify-center">
             <h1 class="text-3xl font-bold text-accentLIGHT dark:text-accentDARK">Certifications</h1>
             <Certifications class="mt-10"/>
         </section>
