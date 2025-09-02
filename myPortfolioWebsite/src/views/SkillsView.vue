@@ -23,6 +23,9 @@
                     <br>
                     As such, I thought that there would be no better way to showcase my skills than through encapsulating them in the 
                     visualisations I have made below using D3.js. Enjoy!
+                    <br>
+                    <br>
+                    <strong>(Tap or Hover over the segments to see more information)</strong>
             </p>
         </PageTitles>   
         <div class="flex flex-col md:flex-row justify-center gap-10 items-center px-10 md:px-5 lg:px-28 py-2 md:py-10 lg:py-20 mt-2 md:mt-20 max-w-[1050px] mx-auto">    
