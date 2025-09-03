@@ -9,8 +9,10 @@
       { "name": "PHP",          "projects": 11, "favourite": false, "lastUsed": "Past",     "notes": "Minimal use, not preferred" }
     ],
     "databases": [
-      { "name": "MySQL",        "projects": 15, "favourite": false,  "lastUsed": "Current",  "notes": "Predominantly used in SQL databases" },
-      { "name": "MongoDB",      "projects": 2,  "favourite": true,   "lastUsed": "Current",  "notes": "First introduction to NoSQL, very fresh." }
+      { "name": "MySQL",        "projects": 15, "favourite": true,  "lastUsed": "Current",   "notes": "Predominantly used in SQL databases during college" },
+      { "name": "MongoDB",      "projects": 2,  "favourite": true,   "lastUsed": "Current",   "notes": "First introduction to NoSQL, very fresh." },
+      { "name": "SQL Server",   "projects": 120,"favourite": true,   "lastUsed": "Recently",  "notes": "Used in production environments during work placement" },
+      { "name": "SQLite",       "projects": 2,  "favourite": false,   "lastUsed": "Past",      "notes": "Been introduced to it. Used sparingly in a few projects" }
     ],
     "frameworks": [
       { "name": "Vue",          "projects": 2,  "favourite": true,  "lastUsed": "Current",  "notes": "Favourite frontend framework"},

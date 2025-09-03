@@ -2,14 +2,14 @@
 import * as d3 from 'd3'
 import { onMounted, ref, defineProps } from 'vue'
 
-const { type } = defineProps({ type: String })
+const props = defineProps({ type: String, colorScheme: Array })
 const container = ref(null)
 
 let pathData 
 
 const drawChart = async () => {
     const dataJSON = await fetch('data/skills.json').then(res => res.json())
-    const data = dataJSON.skills[type]
+    const data = dataJSON.skills[props.type]
     const size = 300
     const radius = size / 2
 
@@ -25,7 +25,7 @@ const drawChart = async () => {
     const arc = d3.arc().innerRadius(50).outerRadius(radius)
 
     //const color = d3.scaleOrdinal(["#2E005E","#00A676","#D97706","#2563EB","#DC2626","#9333EA","#F59E0B","#10B981","#3B82F6","#F43F5E"])
-    const color = d3.scaleOrdinal(d3.schemeBuPu[9]);    
+    const color = d3.scaleOrdinal(props.colorScheme);    
     const tooltip = d3.select('#tooltip')
 
     pathData = svg.selectAll('path')

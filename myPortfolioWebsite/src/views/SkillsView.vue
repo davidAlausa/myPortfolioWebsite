@@ -6,6 +6,11 @@
     
     import PageTitles from '@/components/PageTitles.vue';
 
+    import * as d3 from 'd3'
+
+    const purpColorArray = d3.schemeBuPu[9]
+    const bluColorArray = d3.schemeYlGnBu[9].reverse()
+    const grnColorArray = d3.schemePuBuGn[9].reverse()
 </script>
 <template>
     <div class="skills-view">
@@ -25,11 +30,11 @@
                     visualisations I have made below using D3.js. Enjoy!
                     <br>
                     <br>
-                    <strong>(Tap or Hover over the segments to see more information)</strong>
+                    <strong>(Tap or hover over the slices to see more information)</strong>
             </p>
         </PageTitles>   
         <div class="flex flex-col md:flex-row justify-center gap-10 items-center px-10 md:px-5 lg:px-28 py-2 md:py-10 lg:py-20 mt-2 md:mt-20 max-w-[1050px] mx-auto">    
-            <Visualisations type="languages"/>
+            <Visualisations type="languages" :colorScheme="purpColorArray"/>
             <VisualisationsText
             title="Coding Languages used in my projects."
             description="Favourites: JavaScript, Java, Python"
@@ -48,8 +53,23 @@
                 description="Favourites: Vue, Spring"
                 class="mb-10 md:mb-0"
             />
-            <Visualisations type="frameworks"/>
+            <Visualisations type="frameworks" :colorScheme="bluColorArray"/>
         </div>
+
+        <div class="md:hidden px-20">
+            <hr class="my-6 border-t-2 border-accentLIGHT dark:border-accentDARK" />
+        </div>
+
+
+        <div class="flex flex-col md:flex-row justify-center gap-10 items-center  px-10 md:px-5 lg:px-28 py-2 md:py-20 max-w-[1050px] mx-auto">
+            <Visualisations type="databases" :colorScheme="grnColorArray"/>
+            <VisualisationsText 
+                title="Database Management Systems used."
+                description="Favourites: SQL Server, MongoDB"
+                class="mb-10 md:mb-0"
+            />
+        </div>
+
         <small class="flex flex-row text-center justify-center text-primaryLIGHT dark:text-primaryDARK">***Data visualised inlclude academic projects and coursework as well as personal projects.***</small>
         <section class="flex flex-col mt-20 md:mt-10 p-10 items-center justify-center">
             <h1 class="text-3xl font-bold text-accentLIGHT dark:text-accentDARK">Certifications</h1>
